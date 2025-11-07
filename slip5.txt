@@ -1,0 +1,85 @@
+a. Write a R program to create a matris taking a given vector of numbers as input and define the column and row names. Display the matrix
+
+
+b. Write a R program to create two 2x3 matrix and add, subtract, multiply and divide the matrixes
+
+
+
+
+c. Write a R program to create a matrix from a list of given vectors
+
+
+d. Write a R program to convert a given matrix to a list of column-vectors.
+
+
+
+# Given vector
+vec <- c(10, 20, 30, 40, 50, 60)
+
+# Create matrix (2 rows, 3 columns)
+mat <- matrix(vec, nrow = 2, ncol = 3, byrow = TRUE)
+
+# Define row and column names
+rownames(mat) <- c("Row1", "Row2")
+colnames(mat) <- c("Col1", "Col2", "Col3")
+
+# Display matrix
+print("Matrix with Row and Column Names:")
+print(mat)
+======================================================================================================================
+# First matrix
+mat1 <- matrix(c(2, 4, 6, 8, 10, 12), nrow = 2, ncol = 3)
+
+# Second matrix
+mat2 <- matrix(c(1, 2, 3, 4, 5, 6), nrow = 2, ncol = 3)
+
+print("Matrix 1:")
+print(mat1)
+
+print("Matrix 2:")
+print(mat2)
+
+# Addition
+add <- mat1 + mat2
+print("Addition of Matrices:")
+print(add)
+
+# Subtraction
+sub <- mat1 - mat2
+print("Subtraction of Matrices:")
+print(sub)
+
+# Multiplication (Element-wise)
+mul <- mat1 * mat2
+print("Multiplication of Matrices:")
+print(mul)
+
+# Division (Element-wise)
+div <- mat1 / mat2
+print("Division of Matrices:")
+print(div)
+=====================================================================================================================
+# Create list of vectors
+vec_list <- list(
+  c(1, 2, 3),
+  c(4, 5, 6),
+  c(7, 8, 9)
+)
+
+# Convert list to matrix
+mat_list <- matrix(unlist(vec_list), nrow = 3, byrow = TRUE)
+
+print("Matrix from List of Vectors:")
+print(mat_list)
+====================================================================================================
+# Create matrix
+mat3 <- matrix(1:9, nrow = 3, ncol = 3)
+
+print("Original Matrix:")
+print(mat3)
+
+# Convert to list of columns
+col_list <- as.list(data.frame(mat3))
+
+print("List of Column Vectors:")
+print(col_list)

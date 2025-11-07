@@ -1,0 +1,46 @@
+install.packages("arules")
+install.packages("arulesViz")
+
+library(arules)
+library(arulesViz)
+
+
+# Create transaction dataset
+transactions_list <- list(
+  c("Milk", "Bread", "Butter"),
+  c("Bread", "Butter"),
+  c("Milk", "Bread"),
+  c("Milk", "Diaper", "Beer", "Eggs"),
+  c("Bread", "Butter", "Beer"),
+  c("Milk", "Bread", "Butter")
+)
+
+# Convert to transactions format
+trans <- as(transactions_list, "transactions")
+
+# Display transactions
+inspect(trans)
+
+# Apply Apriori Algorithm
+rules_apriori <- apriori(trans, parameter = list(supp = 0.3, conf = 0.6))
+
+# Display generated rules
+cat("===== Apriori Rules =====\n")
+inspect(rules_apriori)
+
+# Optional: Visualize the rules
+plot(rules_apriori, method = "grouped")
+
+# Apply ECLAT Algorithm to find frequent itemsets
+frequent_itemsets <- eclat(trans, parameter = list(supp = 0.3, minlen = 2))
+
+# Display frequent itemsets
+cat("===== Frequent Itemsets (ECLAT) =====\n")
+inspect(frequent_itemsets)
+
+# Generate rules from frequent itemsets
+rules_eclat <- ruleInduction(frequent_itemsets, trans, confidence = 0.6)
+
+# Display generated rules
+cat("===== ECLAT Rules =====\n")
+inspect(rules_eclat)

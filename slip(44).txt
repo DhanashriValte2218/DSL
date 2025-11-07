@@ -1,0 +1,93 @@
+# Create two vectors
+names <- c("Amit", "Riya", "Karan", "Riya", "Neha", "Amit")
+marks <- c(85, 90, 78, 90, 88, 85)
+
+# Create a data frame using the vectors
+student_data <- data.frame(Name = names, Marks = marks)
+
+# Display the original data frame
+print("Original Data Frame:")
+print(student_data)
+
+# Find duplicated elements (rows)
+dup_rows <- student_data[duplicated(student_data), ]
+print("Duplicated Rows:")
+print(dup_rows)
+
+# Find unique rows
+unique_rows <- unique(student_data)
+print("Unique Rows:")
+print(unique_rows)
+
+
+
+
+# Create a data frame with employee details
+employee_data <- data.frame(
+  Emp_ID = c(105, 102, 104, 101, 103),
+  Name = c("Amit", "Riya", "Karan", "Neha", "Pooja"),
+  Salary = c(45000, 52000, 48000, 60000, 47000)
+)
+
+# Display the original data frame
+print("Original Employee Data Frame:")
+print(employee_data)
+
+# Sort the data frame in ascending order by Employee ID
+sorted_data <- employee_data[order(employee_data$Emp_ID), ]
+
+# Display the sorted data frame
+print("Employee Details in Ascending Order (by Emp_ID):")
+print(sorted_data)
+
+
+
+
+# Create the first data frame
+df1 <- data.frame(
+  ID = c(1, 2, 3, 4, 5),
+  Name = c("Amit", "Riya", "Karan", "Neha", "Pooja")
+)
+
+# Create the second data frame
+df2 <- data.frame(
+  ID = c(3, 4, 5, 6, 7),
+  Name = c("Karan", "Neha", "Pooja", "Tina", "Raj")
+)
+
+# Display the original data frames
+print("First Data Frame:")
+print(df1)
+
+print("Second Data Frame:")
+print(df2)
+
+# Find elements (rows) present in df1 but not in df2
+diff_df <- subset(df1, !(Name %in% df2$Name))
+
+# Display the result
+print("Elements in First Data Frame not present in Second Data Frame:")
+print(diff_df)
+
+
+
+
+
+# Create a sample data frame
+student_data <- data.frame(
+  Name = c("Amit", "Riya", "Karan", "Neha", "Pooja"),
+  Age = c(21, 22, 20, 23, 21),
+  Marks = c(85, 90, 78, 88, 92)
+)
+
+# Display the original data frame
+print("Original Data Frame:")
+print(student_data)
+
+# Extract 3rd and 5th rows with 1st and 3rd columns
+extracted_data <- student_data[c(3, 5), c(1, 3)]
+
+# Display the extracted data
+print("Extracted 3rd and 5th Rows with 1st and 3rd Columns:")
+print(extracted_data)
+

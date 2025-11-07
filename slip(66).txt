@@ -1,0 +1,89 @@
+# Number of terms
+n <- 10
+
+# Initialize the first two terms
+a <- 0
+b <- 1
+
+# Print Fibonacci series
+cat("Fibonacci Series up to", n, "terms:\n")
+cat(a, b)
+
+# Generate remaining terms
+for(i in 3:n){
+  c <- a + b
+  cat(" ", c)
+  a <- b
+  b <- c
+}
+
+
+
+
+# Program to generate a multiplication table of a given number
+
+# Take input from the user
+num <- as.integer(readline(prompt = "Enter a number: "))
+
+# Generate and print the multiplication table
+print(paste("Multiplication Table of", num, ":"))
+for (i in 1:10) {
+  result <- num * i
+  print(paste(num, "x", i, "=", result))
+}
+
+
+# Input: number to check
+num <- as.integer(readline(prompt = "Enter a number: "))
+sum <- 0
+temp <- num
+
+# Calculate sum of cubes of digits
+while(temp > 0){
+  digit <- temp %% 10
+  sum <- sum + (digit^3)
+  temp <- temp %/% 10
+}
+
+# Check if number is Armstrong
+if(sum == num){
+  cat(num, "is an Armstrong number.\n")
+} else {
+  cat(num, "is not an Armstrong number.\n")
+}
+
+
+
+
+# Input: number to calculate factorial
+num <- as.integer(readline(prompt = "Enter a number: "))
+
+# Initialize factorial
+fact <- 1
+
+# Calculate factorial using for loop
+for(i in 1:num){
+  fact <- fact * i
+}
+
+# Display the result
+cat("Factorial of", num, "is", fact, "\n")
+
+
+
+
+
+
+# Input: number up to which sum is to be calculated
+n <- as.integer(readline(prompt = "Enter a number: "))
+
+# Initialize sum
+sum <- 0
+
+# Calculate sum using for loop
+for(i in 1:n){
+  sum <- sum + i
+}
+
+# Display the result
+cat("Sum of first", n, "natural numbers is:", sum, "\n")

@@ -1,0 +1,99 @@
+# Create a numeric vector
+my_vector <- c(10, 20, 30, 40, 50)
+
+# Calculate sum
+vector_sum <- sum(my_vector)
+print(paste("Sum:", vector_sum))
+
+# Calculate mean
+vector_mean <- mean(my_vector)
+print(paste("Mean:", vector_mean))
+
+# Calculate product
+vector_product <- prod(my_vector)
+print(paste("Product:", vector_product))
+
+
+
+
+# Create a numeric vector
+my_vector <- c(25, 10, 45, 5, 30)
+
+# Display the original vector
+print("Original Vector:")
+print(my_vector)
+
+# Sort the vector in ascending order
+ascending_order <- sort(my_vector)
+print("Sorted Vector in Ascending Order:")
+print(ascending_order)
+
+# Sort the vector in descending order
+descending_order <- sort(my_vector, decreasing = TRUE)
+print("Sorted Vector in Descending Order:")
+print(descending_order)
+
+
+
+# Create two vectors of different lengths
+v1 <- c(2, 4, 6)
+v2 <- c(1, 3, 5, 7, 9, 11)
+
+# Combine vectors into arrays (matrices)
+# Use 'dim' to create 2x3 matrices (recycling elements if needed)
+m1 <- array(v1, dim = c(2, 3))
+m2 <- array(v2, dim = c(2, 3))
+
+# Print matrices
+print("Matrix 1:")
+print(m1)
+
+print("Matrix 2:")
+print(m2)
+
+# Addition of matrices
+add <- m1 + m2
+print("Addition of Matrices:")
+print(add)
+
+# Subtraction of matrices
+sub <- m1 - m2
+print("Subtraction of Matrices:")
+print(sub)
+
+
+
+
+# Extract first 10 English letters in lower case
+first10_lower <- letters[1:10]
+print("First 10 letters (lower case):")
+print(first10_lower)
+# Output: a b c d e f g h i j
+
+# Extract last 10 English letters in upper case
+last10_upper <- LETTERS[17:26]  # 17th to 26th letters
+print("Last 10 letters (upper case):")
+print(last10_upper)
+# Output: Q R S T U V W X Y Z
+
+# Extract letters between 22nd to 24th in upper case
+letters_22_24 <- LETTERS[22:24]
+print("22nd to 24th letters (upper case):")
+print(letters_22_24)
+# Output: V W X
+
+
+
+# Create a vector
+v <- c(15, 3, 9, 27, 12)
+
+# Sort the vector in ascending order
+ascending <- sort(v)
+print("Sorted Vector in Ascending Order:")
+print(ascending)
+
+# Sort the vector in descending order
+descending <- sort(v, decreasing = TRUE)
+print("Sorted Vector in Descending Order:")
+print(descending)
+

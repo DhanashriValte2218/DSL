@@ -1,0 +1,74 @@
+
+a. Write an R program to create a data frame using two given vectors and display the duplicated elements and unique rows of the said data frame.
+
+
+b. Write an R program to create a data frames which contain details of 5 employees and display the details in ascending order.
+
+
+c. Write an R program to compare two data frames to find the elements in first data frame that are not present in second data frame.
+
+
+d. Write a R program to extract 3rd and 5th rows with 1st and 3rd columns from a given data frame
+===================================================================================================================
+# Two vectors
+v1 <- c(1, 2, 3, 2, 4)
+v2 <- c("A", "B", "C", "B", "D")
+
+# Create data frame
+df <- data.frame(v1, v2)
+print("Original Data Frame:")
+print(df)
+
+# Display duplicated rows
+dup_rows <- df[duplicated(df), ]
+print("Duplicated Rows:")
+print(dup_rows)
+
+# Display unique rows
+unique_rows <- unique(df)
+print("Unique Rows:")
+print(unique_rows)
+=======================================================================================================================
+# Create data frame
+employees <- data.frame(
+  EmpID = c(101, 102, 103, 104, 105),
+  Name = c("Ravi", "Sneha", "Amit", "Pooja", "Karan"),
+  Salary = c(35000, 42000, 30000, 50000, 45000)
+)
+
+print("Original Employee Data:")
+print(employees)
+
+# Sort in ascending order by Salary
+sorted_emp <- employees[order(employees$Salary), ]
+print("Employees in Ascending Order of Salary:")
+print(sorted_emp)
+======================================================================================================================
+# Create two data frames
+df1 <- data.frame(ID = c(1, 2, 3, 4), Value = c("A", "B", "C", "D"))
+df2 <- data.frame(ID = c(2, 4), Value = c("B", "D"))
+
+print("First Data Frame:")
+print(df1)
+print("Second Data Frame:")
+print(df2)
+
+# Elements present in df1 but not in df2
+not_in_df2 <- df1[!df1$ID %in% df2$ID, ]
+print("Elements in df1 but not in df2:")
+print(not_in_df2)
+======================================================================================================================
+# Create sample data frame
+data <- data.frame(
+  Rollno = c(10, 20, 30, 40, 50),
+  name = c(5, 10, 15, 20, 25),
+  marks = c(100, 200, 300, 400, 500)
+)
+
+print("Original Data Frame:")
+print(data)
+
+# Extract 3rd & 5th rows and 1st & 3rd columns
+result <- data[c(3, 5), c(1, 3)]
+print("Extracted Data:")
+print(result)

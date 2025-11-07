@@ -1,0 +1,91 @@
+a.Write an R program to sort a list of 10 strings in ascending and descending order.
+
+
+b. Write a script in R to create a list of cities and perform the following
+
+Give names to the elements in the list.
+
+Add an element at the end of the list
+
+Remove the last element.
+
+Update the 3rd Element
+
+c.
+c. Write an R program to create a list of elements using a vector, a matrix and a
+
+function.
+d.
+
+Print the content of the list.
+
+d. Write an R program to convert a given matrix to a list and print list in ascending order
+
+# List of 10 strings
+str_list <- c("banana", "apple", "grapes", "orange", "kiwi", "mango", "papaya", "pear", "plum", "fig")
+
+# Ascending order
+asc_order <- sort(str_list)
+cat("Ascending Order:\n")
+print(asc_order)
+
+# Descending order
+desc_order <- sort(str_list, decreasing = TRUE)
+cat("Descending Order:\n")
+print(desc_order)
+======================================================================================================================
+# Create a list of cities
+cities <- list("Mumbai", "Pune", "Nashik", "Nagpur")
+
+# Give names to elements
+names(cities) <- c("City1", "City2", "City3", "City4")
+print("List with names:")
+print(cities)
+
+# Add an element at the end
+cities$City5 <- "Solapur"
+print("After adding an element:")
+print(cities)
+
+# Remove the last element
+cities <- cities[-length(cities)]
+print("After removing last element:")
+print(cities)
+
+# Update the 3rd element
+cities$City3 <- "Thane"
+print("After updating 3rd element:")
+print(cities)
+=======================================================================================================================
+# Create vector
+v <- c(1, 2, 3, 4, 5)
+
+# Create matrix
+m <- matrix(1:9, nrow = 3, ncol = 3)
+
+# Create a function
+fun <- function(x) {
+  return (x^2)
+}
+
+# Create a list
+my_list <- list(Vector = v, Matrix = m, Function = fun)
+
+# Print list
+print("Content of the list:")
+print(my_list)
+=====================================================================================================================
+# Create matrix
+mat <- matrix(c(9, 3, 5, 1, 8, 2), nrow = 2, ncol = 3)
+
+# Convert matrix to list
+list_conv <- as.list(mat)
+
+# Print list
+print("List converted from matrix:")
+print(list_conv)
+
+# Print list in ascending order
+asc_list <- sort(unlist(list_conv))
+cat("List in Ascending Order:\n")
+print(asc_list)

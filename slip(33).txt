@@ -1,0 +1,81 @@
+# Create a list of 10 strings
+string_list <- list("banana", "apple", "mango", "cherry", "grape", 
+                    "orange", "kiwi", "peach", "plum", "melon")
+
+# Convert list to vector for sorting
+string_vector <- unlist(string_list)
+
+# Sort in ascending order
+ascending <- sort(string_vector)
+print("Strings in Ascending Order:")
+print(ascending)
+
+# Sort in descending order
+descending <- sort(string_vector, decreasing = TRUE)
+print("Strings in Descending Order:")
+print(descending)
+
+
+
+
+
+# Create a list of cities
+cities <- list("Mumbai", "Delhi", "Chennai", "Kolkata", "Pune")
+
+# Give names to the elements in the list
+names(cities) <- c("City1", "City2", "City3", "City4", "City5")
+print("List of Cities with Names:")
+print(cities)
+
+# Add an element at the end of the list
+cities$City6 <- "Hyderabad"
+print("List after Adding an Element:")
+print(cities)
+
+# Remove the last element
+cities$City6 <- NULL
+print("List after Removing the Last Element:")
+print(cities)
+
+# Update the 3rd element
+cities$City3 <- "Bengaluru"
+print("List after Updating the 3rd Element:")
+print(cities)
+
+
+
+# Create a vector
+vec <- c(10, 20, 30, 40, 50)
+
+# Create a matrix
+mat <- matrix(1:9, nrow = 3, ncol = 3)
+
+# Create a simple function
+fun <- function(x) {
+  return(x * 2)
+}
+
+# Create a list containing the vector, matrix, and function
+my_list <- list(Vector = vec, Matrix = mat, Function = fun)
+
+# Print the contents of the list
+print("Contents of the List:")
+print(my_list)
+
+
+
+
+# Create a matrix
+mat <- matrix(c(8, 3, 5, 1, 9, 2), nrow = 2, ncol = 3)
+print("Original Matrix:")
+print(mat)
+
+# Convert matrix to a list
+mat_list <- as.list(mat)
+print("Matrix Converted to List:")
+print(mat_list)
+
+# Sort the list in ascending order
+sorted_list <- sort(unlist(mat_list))
+print("List in Ascending Order:")
+print(sorted_list)

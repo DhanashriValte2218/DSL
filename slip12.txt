@@ -1,0 +1,100 @@
+
+slip=2
+
+=======================================================================================================================
+# Create a vector
+vec <- c(2, 4, 6, 8, 10)
+
+# Sum of vector elements
+sum_vec <- sum(vec)
+
+# Mean of vector elements
+mean_vec <- mean(vec)
+
+# Product of vector elements
+prod_vec <- prod(vec)
+
+# Display results
+cat("Sum of Vector:", sum_vec, "\n")
+cat("Mean of Vector:", mean_vec, "\n")
+cat("Product of Vector:", prod_vec, "\n")
+=======================================================================================================================
+# Create a vector
+vec <- c(12, 4, 8, 3, 15, 6)
+
+# Sort in ascending order
+asc <- sort(vec)
+
+# Sort in descending order
+desc <- sort(vec, decreasing = TRUE)
+
+# Display results
+cat("Ascending Order:", asc, "\n")
+cat("Descending Order:", desc, "\n")
+
+======================================================================================================================
+# Create two vectors of different lengths
+vec1 <- c(1, 2, 3)
+vec2 <- c(4, 5, 6, 7, 8, 9)
+
+# Create arrays from the vectors
+arr1 <- array(vec1, dim = c(3, 3))
+arr2 <- array(vec2, dim = c(3, 3))
+
+# Addition and subtraction of arrays
+add_result <- arr1 + arr2
+sub_result <- arr1 - arr2
+
+# Display results
+cat("Array 1:\n")
+print(arr1)
+cat("\nArray 2:\n")
+print(arr2)
+cat("\nAddition of Arrays:\n")
+print(add_result)
+cat("\nSubtraction of Arrays:\n")
+print(sub_result)
+=======================================================================================================================
+# Extract first 10 English letters in lowercase
+first_10_lower <- letters[1:10]
+
+# Extract last 10 English letters in uppercase
+last_10_upper <- LETTERS[17:26]
+
+# Extract letters between 22nd to 24th letters in uppercase
+letters_22_24_upper <- LETTERS[22:24]
+
+# Display results
+cat("First 10 lowercase letters:\n", first_10_lower, "\n")
+cat("Last 10 uppercase letters:\n", last_10_upper, "\n")
+cat("22nd to 24th uppercase letters:\n", letters_22_24_upper, "\n")
+=====================================================================================================================
+# Create two vectors of different lengths
+vector1 <- c(1, 2, 3, 4, 5)
+vector2 <- c(6, 7, 8)
+
+# Convert vectors to matrices
+matrix1 <- matrix(vector1, nrow = 5, ncol = 1, byrow = TRUE)
+matrix2 <- matrix(vector2, nrow = 3, ncol = 1, byrow = TRUE)
+
+cat("\nMatrix 1 (from vector1):\n")
+print(matrix1)
+
+cat("\nMatrix 2 (from vector2):\n")
+print(matrix2)
+
+# Reshape matrix2 to match matrix1 dimensions
+matrix2_reshaped <- matrix(rep(vector2, length.out = length(vector1)), nrow = 5, ncol = 1)
+
+cat("\nReshaped Matrix 2 to match Matrix 1 dimensions:\n")
+print(matrix2_reshaped)
+
+# Addition
+addition_result <- matrix1 + matrix2_reshaped
+cat("\nAddition of Matrices:\n")
+print(addition_result)
+
+# Subtraction
+subtraction_result <- matrix1 - matrix2_reshaped
+cat("\nSubtraction of Matrices:\n")
+print(subtraction_result)

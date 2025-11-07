@@ -1,0 +1,82 @@
+Design and develop at least 5 problem statements which demonstrate the use of
+
+Control Structure of R
+
+
+
+
+1. Write a program for Fibonacci series
+
+
+2. Write a program to generate a multiplication table of a given manber.
+
+
+
+
+3. An Armstrong nunber, also known as narcissistic number, is a number that is equal to the sum of the cubes of its own digits. Write a program to check if a given number is an Armstrong number.
+
+
+4. Write a program to find the factorial of a number.
+
+
+5. Write a program to find the sum of natural numbers.
+
+
+n <- as.integer(readline(prompt = "Enter number of terms: "))
+
+a <- 0
+b <- 1
+
+cat("Fibonacci Series: ")
+
+for (i in 1:n) {
+  cat(a, " ")
+  temp <- a + b
+  a <- b
+  b <- temp
+}
+=======================================================================================================================
+# Program to generate multiplication table
+num <- as.integer(readline("Enter a number: "))
+
+cat("Multiplication Table of", num, "\n")
+for(i in 1:10){
+  cat(num, "x", i, "=", num * i, "\n")
+}
+=======================================================================================================================
+# Program to check Armstrong number
+num <- as.integer(readline("Enter a number: "))
+sum <- 0
+temp <- num
+
+while(temp > 0){
+  digit <- temp %% 10
+  sum <- sum + (digit^3)
+  temp <- temp %/% 10
+}
+
+if(sum == num){
+  cat(num, "is an Armstrong Number")
+} else {
+  cat(num, "is not an Armstrong Number")
+}
+=======================================================================================================================
+# Program to find factorial of a number
+num <- as.integer(readline("Enter a number: "))
+fact <- 1
+
+for(i in 1:num){
+  fact <- fact * i
+}
+
+cat("Factorial of", num, "is:", fact)
+======================================================================================================================
+# Program to find sum of natural numbers
+n <- as.integer(readline("Enter the number: "))
+sum <- 0
+
+for(i in 1:n){
+  sum <- sum + i
+}
+
+cat("Sum of first", n, "natural numbers is:", sum)
